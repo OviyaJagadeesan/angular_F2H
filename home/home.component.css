@@ -1,0 +1,95 @@
+.card{
+  width: 100%;
+  height: 100%;
+}
+/* Custom-text for modify the text format */
+.custom-text{
+  color: #415162;
+  font-size: 26px;
+  font-weight: 600;
+}
+.custom-textViewAll{
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* custom-card */
+.custom-card{
+  width: 26rem;
+  border: none;
+}
+
+/*Css For Deal of the Day*/
+.custom-cardDOD{
+  width: 100%;
+  height: 683px;
+  background-color: #F7F7F7;
+border: none;
+}
+.custom-textDOD{
+  font-weight: 800;
+  color: #415162;
+  font-size: 30px;
+}
+
+
+/* this is for constimize the ui based on screen size */
+@media (max-width: 500px) {
+
+ .custom-text{
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+ }
+ .custom-arrow{
+  width: 13px;
+  height: 13px;
+ }
+
+ .custom-promoImage{
+  width: auto;
+  height: 188px;
+  align-items: center;
+ }
+ .custom-farmsImage{
+  width: auto;
+  height: 98px;
+  align-items: center;
+ }
+}
+@media (max-width: 700px) {
+  .custom-text{
+   font-size: 18px;
+   display: flex;
+  justify-content: center;
+
+  }
+  .custom-arrow{
+   width: 13px;
+   height: 13px;
+  }
+
+ }
+ @media (max-width: 900px) {
+  .custom-text{
+   font-size: 18px;
+   display: flex;
+
+  }
+  .custom-arrow{
+   width: 13px;
+   height: 13px;
+  }
+  .custom-promoImage{
+    width: auto;
+    height: 130px;
+
+   }
+   .custom-farmsImage{
+    width: auto;
+    height: 100px;
+    margin-top: 2px;
+    align-items: center;
+   }
+
+ }

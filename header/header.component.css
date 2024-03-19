@@ -1,0 +1,135 @@
+.navbar-brand {
+  letter-spacing: 0px;
+  font-weight: bold;
+  font-family: sans-serif;
+  color: #415162;
+}
+
+#navbarNav {
+  font-size: 15px;
+  font-family: sans-serif;
+  opacity: 1;
+  color: #415162;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: flex-end;
+}
+
+.custom-button {
+  border: none;
+  padding: 0px;
+}
+.custom-rightNavbar {
+  cursor: pointer;
+}
+
+/* .navbar-right{
+ margin-left: 313px;
+
+} */
+
+/* This style is for the Shop-By-Category */
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  color: #415162;
+}
+.categoryList {
+  height: auto;
+  padding: 20px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background-color: white;
+}
+.locationList {
+  width: 15%;
+  height: auto;
+  padding: 20px;
+  position: absolute;
+  left: 70%;
+  z-index: 9999;
+  background-color: white;
+}
+.recentSearchList {
+  width: auto;
+  height: auto;
+  padding: 20px;
+  position: absolute;
+  z-index: 9999;
+  background-color: white;
+}
+.inputField {
+  width: 100%;
+  outline: none;
+  border: 1px solid #e4e8e9;
+  font-family: "Open Sans", sans-serif;
+  border-radius: 5px;
+  padding: 0px 5px;
+}
+.categoryContainer {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 15px;
+}
+.categoryViewAll {
+  color: #ce1126;
+  font-weight: 600;
+}
+.viewAllCategory {
+  width: 100%;
+  background-color: #80b435;
+  color: white;
+}
+.colbody h5 {
+  padding-bottom: 10px;
+  color: #415162;
+}
+.card,
+.colbody {
+  border: none;
+  border-left: 1px solid #c1c2c4;
+  border-radius: 0px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+.colbody ul,
+.col ul li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.searchSection {
+  display: flex;
+  border: 1px solid #c1c2c4;
+  border-radius: 5px;
+}
+.closeButton {
+  border: none;
+}
+
+@media (max-width: 1024px) {
+  #navbarNav {
+    width: 100%;
+  }
+}
+@media (max-width: 990px) {
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+@media (max-width: 767px) {
+  .colbody {
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid black;
+    padding-bottom: 15px;
+  }
+}

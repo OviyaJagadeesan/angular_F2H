@@ -1,0 +1,167 @@
+{
+    "Users": [
+      {
+        "Email": "oviya@gmail.com",
+        "Password": "6537",
+        "id": 1
+      }
+    ],
+    "PromotionImage": [
+      {
+        "id": 1,
+        "imgSrc": "assets/homePageImage/Promo1.png"
+      },
+      {
+        "id": 2,
+        "imgSrc": "assets/homePageImage/Promo2.png"
+      },
+      {
+        "id": 3,
+        "imgSrc": "assets/homePageImage/Promo3.png"
+      }
+    ],
+    "recentSearch": [
+      {
+        "value": "Eggs",
+        "id": 1
+      }
+    ],
+    "categoryList": [
+      {
+        "id": 1,
+        "imgSrc": "assets/categoryPageImage/dairyImage.png",
+        "categoryTitle": "Milk"
+      },
+      {
+        "id": 2,
+        "imgSrc": "assets/categoryPageImage/poultryImage.png",
+        "categoryTitle": "Poultry"
+      },
+      {
+        "id": 3,
+        "imgSrc": "assets/categoryPageImage/seafoodImage.png",
+        "categoryTitle": "Sea Food"
+      },
+      {
+        "id": 4,
+        "imgSrc": "assets/categoryPageImage/veggiesImage.png",
+        "categoryTitle": "Vegetables"
+      },
+      {
+        "id": 5,
+        "imgSrc": "assets/categoryPageImage/fruitsImage.png",
+        "categoryTitle": "Fruits"
+      },
+      {
+        "id": 6,
+        "imgSrc": "assets/categoryPageImage/flowersImage.png",
+        "categoryTitle": "Flowers"
+      },
+      {
+        "id": 7,
+        "imgSrc": "assets/categoryPageImage/herbsImage.png",
+        "categoryTitle": "Herbs"
+      },
+      {
+        "id": 8,
+        "imgSrc": "assets/categoryPageImage/seasoningsImage.png",
+        "categoryTitle": "Seasonings"
+      },
+      {
+        "id": 9,
+        "imgSrc": "assets/categoryPageImage/datesImage.jpg",
+        "categoryTitle": "Dates"
+      },
+      {
+        "id": 10,
+        "imgSrc": "assets/categoryPageImage/honeyImage.jpg",
+        "categoryTitle": "Honey"
+      },
+      {
+        "id": 11,
+        "imgSrc": "assets/categoryPageImage/nutsImage.png",
+        "categoryTitle": "Nuts"
+      },
+      {
+        "id": 12,
+        "imgSrc": "assets/categoryPageImage/breadImage.jpg",
+        "categoryTitle": "Bread"
+      }
+    ],
+    "shopCategory": [
+      {
+        "categoryHeading": "Dairy",
+        "item1": "Milk",
+        "item2": "Butter",
+        "item3": "Cheese",
+        "id": 1
+      },
+      {
+        "categoryHeading": "Poultry",
+        "item1": "Egg",
+        "item2": "Chicken",
+        "item3": "Turkey",
+        "id": 2
+      },
+      {
+        "categoryHeading": "Sea Food",
+        "item1": "Shrimps",
+        "item2": "Fish",
+        "item3": "Lobster",
+        "id": 3
+      },
+      {
+        "categoryHeading": "Vegetables",
+        "item1": "Leafy",
+        "item2": "Roots",
+        "item3": "Seasoning",
+        "id": 4
+      },
+      {
+        "categoryHeading": "Fresh Fruits",
+        "item1": "Apples",
+        "item2": "Citrus",
+        "item3": "Exotic",
+        "id": 5
+      },
+      {
+        "categoryHeading": "Flowers",
+        "item1": "Roses",
+        "item2": "Blue and Blush",
+        "item3": "Festive",
+        "id": 6
+      }
+    ],
+    "Farms": [
+      {
+        "id": "1",
+        "FarmsImage": "assets/farmsImage/gorgeFarm.png",
+        "FarmsName": "Gorge Farm"
+      },
+      {
+        "id": "2",
+        "FarmsImage": "assets/farmsImage/marthaFresh.png",
+        "FarmsName": "Martha's Fresh Farm"
+      },
+      {
+        "id": "3",
+        "FarmsImage": "assets/farmsImage/mathewFarm.png",
+        "FarmsName": "Mathew Farm"
+      },
+      {
+        "id": "4",
+        "FarmsImage": "assets/farmsImage/josephFarm.png",
+        "FarmsName": "Gorge Farm"
+      },
+      {
+        "id": "5",
+        "FarmsImage": "assets/farmsImage/kaysChick.png",
+        "FarmsName": "Kay's Chick Farm"
+      },
+      {
+        "id": "1",
+        "FarmsImage": "assets/farmsImage/aiOrgoFarm.png",
+        "FarmsName": "AI-Orgo Farm"
+      }
+    ]
+  }

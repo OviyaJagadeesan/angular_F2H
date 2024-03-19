@@ -1,0 +1,204 @@
+<div class="overflow-hidden">
+
+  <div class="d-flex justify-content-center p-4  signin">
+    <div class="card p-0 m-0 border border-0">
+      <div class="card-body">
+
+        <div class="row">
+          <!-- Left Side Image -->
+          <div class="col-12 col-md-7 col-lg-6 d-flex justify-content-center loginPageImage">
+            <img class="card-img-left leftSideimg" src="../../assets/APP.png" width="322px"
+              height="579px" alt="card sigin image" />
+          </div>
+          <!-- Right side form -->
+
+          <div class="col-12 col-md-5 col-lg-5 p-2 loginPageContent mt-5 mb-0">
+            <div class="row d-flex justify-content-center align-items-center mb-4">
+              <div class="col-6 text-center " [ngClass]="{'custom-border': islogginForm }">
+                <button type="button" (click)="onClickLogin()"
+                  class="btn card-title text-center mt-2 w-100 custom-button">Login</button>
+              </div>
+              <div class="col-6 text-center " [ngClass]="{'custom-border': isRegisterForm }">
+                <button type="button" (click)="onClickRegister()"
+                  class="btn card-title text-center mt-2 w-100 custom-button">Register</button>
+              </div>
+            </div>
+
+            <!-- LoginForm -->
+            <form [formGroup]="loginForm">
+              <div *ngIf="islogginForm" class="col-12 loginPageContent mt-2 mb-4">
+                <div class="row mt-0 mb-3 justify-content-center">
+                  <div class="col-9 text-center"> Please enter your registered email and password to login to
+                    your Connected</div>
+                </div>
+
+                <div class="mt-1 mb-3">
+                  <div class="input-group input-group-lg">
+                    <span class="input-group-text transparent-bg right-border"
+                      [ngClass]="{'border-danger': loginForm.get('Email')?.invalid && loginForm.get('Email')?.touched}">
+                      <img src="../../assets/envelope.png" alt="Email Icon" />
+                    </span>
+                    <input type="text" class="form-control left-border" id="email" placeholder="Email" name="Email"
+                      formControlName="Email" [(ngModel)]="Email">
+                  </div>
+                  <div *ngIf="loginForm.get('Email')?.invalid && loginForm.get('Email')?.touched"
+                    class="error-message text-danger col-6">
+                    <div *ngIf="loginForm.get('Email')?.errors?.['required']">
+                      Invalid Email Id
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mb-3  mt-1 ">
+                  <div class="input-group input-group-lg">
+                    <span class="input-group-text transparent-bg right-border"
+                      [ngClass]="{'border-danger': loginForm.get('Password')?.invalid && loginForm.get('Password')?.touched}">
+                      <img src="../../assets/password.png" alt="Password show Icon" />
+                    </span>
+                    <input [type]="isPasswordVisible ? 'text' : 'Password'"
+                      class="form-control left-border right-border" id="password" name="Password"
+                      formControlName="Password" [(ngModel)]="Password" placeholder="Password">
+                    <span class="input-group-text transparent-bg left-border" (click)="togglePasswordVisibility()"
+                      [ngClass]="{'border-danger': loginForm.get('Password')?.invalid && loginForm.get('Password')?.touched}">
+                      <img src="../../assets/hide.png" alt="Password show Icon" />
+                    </span>
+                  </div>
+                  <!-- Password Validation -->
+                  <div *ngIf="loginForm.get('Password')?.invalid && loginForm.get('Password')?.touched"
+                    class="error-message text-danger col-6">
+                    <div *ngIf="loginForm.get('Password')?.errors?.['required']">
+                      Invalid Password
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Login Button -->
+                <button type="submit" class="btn btn-lg btn-bg w-100 mt-2" (click)="authenticateUser()">Login</button>
+
+
+                <div class="row mt-5 text-center">
+                  <div class="col-12 col-md-6 col-lg-6 justify-content-center">
+                    <div class="form-check">
+                      <input class="form-check-input custom-checkbox" type="checkbox" id="signedIn">
+                      <label class="form-check-label text-color ms-2" for="signedIn">Keep me signed in</label>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-6">
+                    <label class="form-check-label text-color">Forgot Password?</label>
+                  </div>
+                </div>
+
+              </div>
+            </form>
+
+
+            <!-- RegisterForm -->
+            <form [formGroup]="registerForm">
+              <div *ngIf="isRegisterForm" class="col-12  p-2 loginPageContent mt-2 mb-1">
+
+                <div class="row mt-1  mb-2 justify-content-center">
+                  <div class="col-10 text-center"> Create your Farm2Home account using your email id.</div>
+                </div>
+
+
+                <!-- Register UserName -->
+                <div class="mt-2 ">
+                  <div class="input-group input-group-lg">
+                    <span class="input-group-text transparent-bg right-border"
+                      [ngClass]="{'border-danger': registerForm.get('Email')?.invalid && registerForm.get('Email')?.touched  }">
+                      <img src="../../assets/envelope.png" alt="Email Icon" for="username" />
+                    </span>
+                    <input type="text" class="form-control left-border" id="Email" placeholder="Email" name="Email"
+                      formControlName="Email" [(ngModel)]="authentication.Email">
+                  </div>
+                  <!-- Email Validation -->
+                  <div class="ms-2" *ngIf="registerForm.get('Email')?.invalid && registerForm.get('Email')?.touched">
+                    <div *ngIf="registerForm.get('Email')?.errors?.['required']" class="error-message text-danger">Enter
+                      Valid Email </div>
+                    <div *ngIf="registerForm.get('Email')?.errors?.['email']" class="error-message text-danger">
+                      Please enter a valid email address.
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Register Password -->
+                <div>
+                  <div class="mt-1 input-group input-group-lg password-icon-wrapper">
+                    <span class="input-group-text transparent-bg right-border"
+                      [ngClass]="{'border-danger': registerForm.get('Password')?.invalid && registerForm.get('Password')?.touched}">
+                      <img src="../../assets/password.png" alt="Password show Icon" />
+                    </span>
+
+                    <input [type]="isPasswordVisible ? 'text' : 'password'"
+                      class="form-control left-border right-border" name="Password" id="Password" placeholder="Password"
+                      formControlName="Password" [(ngModel)]="authentication.Password">
+
+                    <span class="input-group-text transparent-bg left-border" (click)="togglePasswordVisibility()"
+                      [ngClass]="{'border-danger': registerForm.get('Password')?.invalid && registerForm.get('Password')?.touched}">
+                      <img src="../../assets/hide.png" alt="Password show Icon" />
+                    </span>
+                  </div>
+                  <!-- Password Validation -->
+                  <div class="col-6"
+                    *ngIf="registerForm.get('Password')?.invalid && registerForm.get('Password')?.touched">
+                    <div *ngIf="registerForm.get('Password')?.errors?.['required']" class="error-message text-danger">
+                      Enter Valid Password </div>
+                  </div>
+                </div>
+
+                <!-- Confirm Password -->
+                <div class="mb-3  mt-1 input-group input-group-lg">
+                  <span class="input-group-text transparent-bg right-border"
+                    [ngClass]="{'border-danger': registerForm.get('ConfirmPassword')?.invalid && registerForm.get('ConfirmPassword')?.touched}">
+                    <img src="../../assets/password.png" alt="Password show Icon" />
+                  </span>
+
+                  <input [type]="isPasswordVisible ? 'text':'password'" class="form-control left-border right-border"
+                    id="Confirm-password" name="ConfirmPassword" formControlName="ConfirmPassword"
+                    placeholder="Confirm Password">
+
+                  <span class="input-group-text transparent-bg left-border" (click)="togglePasswordVisibility()"
+                    [ngClass]="{'border-danger': registerForm.get('ConfirmPassword')?.invalid && registerForm.get('ConfirmPassword')?.touched}">
+                    <img src="../../assets/hide.png" alt="Password show Icon" />
+                  </span>
+                </div>
+
+
+                <div class="row mt-2 mb-2 text-center">
+                  <div class=""> We will send a code to validate.</div>
+                </div>
+
+                <!-- Login Button -->
+                <button type="submit" class="btn btn-lg btn-bg w-100 mt-2"
+                  (click)="createUserAccount()">Procced</button>
+
+
+                <div class="row  mt-3 text-center checkbox">
+                  <div class="col-12 col-md-7 col-lg-7 ">
+                    <div class="form-check">
+                      <input class="form-check-input custom-checkbox" type="checkbox" id="forTerms&Conditions"
+                        (click)="checkboxValidation()">
+                      <label class="form-check-label text-color ms-1" for="forTerms&Conditions">Terms and
+                        Conditions</label>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-5 col-lg-5">
+                    <div class="form-check">
+                      <input class="form-check-input custom-checkbox" type="checkbox" id="Privacy_Policy"
+                        (click)="policyCheckbox()">
+                      <label class="form-check-label text-color ms-2" for="Privacy_Policy">Privacy Policy</label>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </form>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

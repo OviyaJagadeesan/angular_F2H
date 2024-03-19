@@ -1,0 +1,25 @@
+
+<div class="categoryPage container">
+    <div class="nav-content">
+        <span><a routerLink="/Home">Home</a> /
+            <span class="custom-category"><a>Categories</a></span>
+        </span>
+    </div>
+    <div class="category-section">
+        <h4>Categories</h4>
+        <div class="category-view row">
+
+            <div class="col-lg-2 col-md-3 col-sm-4 category-list" *ngFor="let view of categoryData">
+                <div class="card">
+                    <img src="{{view.imgSrc}}" alt="Loading..." class="custom-categoryImage">
+                    <div class="card-img-overlay p-0 d-flex align-items-end">
+                        <div class="card-title mb-0 pb-0">
+                            <span class="custom-categoryTitle">{{view.categoryTitle}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

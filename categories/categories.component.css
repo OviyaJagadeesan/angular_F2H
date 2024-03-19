@@ -1,0 +1,60 @@
+* {
+    font-family: "Open Sans", sans-serif;
+  }
+  
+  .categoryPage {
+    padding: 20px 0px;
+  }
+  .custom-category {
+    color: #80b435;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  .category-section {
+    padding: 30px 0px;
+  }
+  .category-view {
+    padding: 20px 0px;
+  }
+  .category-list {
+    margin: 20px 0px;
+  }
+  .card {
+    border: none;
+  }
+  .custom-categoryImage {
+    border-radius: 6px;
+  }
+  .custom-categoryTitle {
+    color: white;
+    padding: 0px 5px;
+  }
+  .card-title {
+    width: 85%;
+    background-color: #80b435;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+  
+  /* ---- Media Query Section ---- */
+  
+  @media (min-width: 425px) and (max-width: 576px) {
+    .categoryPage {
+      padding: 25px 25px;
+    }
+    .category-view {
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+    .category-list {
+      width: 30%;
+      margin: 20px 25px;
+    }
+    .card {
+      display: flex;
+      width: 150px;
+      height: 150px;
+    }
+  }

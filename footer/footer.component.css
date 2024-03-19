@@ -1,0 +1,94 @@
+.footer{
+  background-color: #c0c5cb;
+  opacity: 1;
+
+}
+.footerContent{
+  padding: 40px 25px;
+  /* margin: 20px 10px; */
+}
+.footerLogo h2{
+  border:1px solid #536171;
+  color: #536171;
+  padding: 10px 20px;
+}
+.footerAbout p{
+  color: white;
+  padding: 20px 0px;
+}
+.shopByCategoryList,.quickLinksList,.loginLinksList,.socialLinksList li{
+  list-style-type: none;
+  color: #415162;
+  line-height: 2;
+  cursor: pointer;
+}
+.socialLinksList h6{
+  color: #536171;
+  font-weight: bold;
+}
+.loginLinksList li{
+  line-height: 3;
+}
+.socialLoginIconList{
+  display: flex;
+
+}
+.socialIcons i{
+  font-size: 25px;
+  margin: 10px 20px 0px 0px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.appDownloadLinks{
+  display: flex;
+}
+.appDownloadLinks img{
+  margin: 0px 5px 0px 0px;
+}
+h6{
+  color:white;
+  font-weight: 400;
+}
+.copyrights{
+  border:1px solid #6b7885;
+  background-color: #415162;
+  padding: 10px 0px;
+}
+
+@media (max-width : 767px){
+  .section{
+      margin-bottom: 30px;
+      border:none;
+      border-bottom: 1px solid #536171;
+      text-align: center;
+  }
+  .loginLinks-section{
+      margin-bottom: 30px;
+      border:none;
+      text-align: center;
+  }
+  .socialLoginIconList{
+      justify-content: center;
+  }
+  .appDownloadLinks{
+      justify-content: center;
+  }
+}
+@media (min-width :768px) and (max-width : 992px){
+  .section{
+      margin-bottom: 30px;
+      border:none;
+      text-align: center;
+  }
+  .appDownloadLinks{
+      justify-content: center;
+  }
+  .loginLinks-section{
+      margin-bottom: 30px;
+      border:none;
+      text-align: center;
+  }
+  .socialLoginIconList{
+      justify-content: center;
+  }
+}

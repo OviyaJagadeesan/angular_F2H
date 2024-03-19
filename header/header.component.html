@@ -1,0 +1,97 @@
+<nav class="navbar navbar-expand-lg bg-body-white shadow bg-white">
+  <div class="container-fluid">
+    <a class="navbar-brand ms-5  mt-1 p-2" href="#">LOGO</a>
+    <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item ms-4  me-2">
+          <button type="button" class="nav-link active btn custom-button p-2" aria-current="page"
+            (click)="toggleCategoryList()">Shop by Category
+            <i class="bi bi-chevron-down ms-1"></i>
+          </button>
+        </li>
+        <li class="nav-item ms-4 me-3">
+          <button type="button" class="nav-link cusotme-Explore" (click)="exploreClicked()"
+            [class.explore-active]="isExploreClicked" [routerLink]="['/Farms']"
+            [ngClass]="{ 'active': isExploreClicked }">Explore Farms</button>
+        </li>
+      </ul>
+    </div>
+    <div class="collapse navbar-collapse float-end justify-content-end" id="navbarNav">
+      <ul class="navbar-nav align-items-center">
+        <li class="nav-item custom-rightNavbar">
+          <a class="nav-link active" aria-current="page">
+            <i class="bi bi-search"></i>
+            Search
+          </a>
+        </li>
+
+        <li class="nav-item custom-rightNavbar">
+          <a class="nav-link active pd-0" aria-current="page">
+            <i class="bi bi-geo-alt "></i>
+            {{District ||'Location'}}
+            <button class="btn custom-button">
+              <i class="bi bi-chevron-down"></i>
+            </button>
+          </a>
+        </li>
+        <li class="nav-item me-3 custom-rightNavbar">
+          <a class="nav-link active" aria-current="page" routerLink="/user">
+            <span>
+              <img src="assets/NabarImage/user.png" alt="User Profile" width="25px" height="24px">
+            </span>
+          </a>
+        </li>
+        <li class="nav-item me-3 custom-rightNavbar">
+          <a class="nav-link active" aria-current="page">
+            <span>
+              <img src="assets/NabarImage/bell.png" alt="Notification Icon" width="25px" height="24px">
+            </span>
+          </a>
+        </li>
+        <li class="nav-item me-3 custom-rightNavbar">
+          <a class="nav-link active" aria-current="page">
+            <span>
+              <img src="assets/NabarImage/shopping-cart.png" alt="Notification Icon" width="25px" height="25px">
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- This code is to show the Shop Category when Shop-By-Category is Clicked-->
+
+<div class="shadow p-2 mb-1 mt-2 bg-body rounded categoryList" *ngIf="showCategoryList">
+  <div class="container">
+    <div class="row categoryContainer">
+      <div class="col-lg-2 col-md-4 col-xs-6" *ngFor="let category of categoryList">
+        <div class="colbody">
+          <ul class="ms-2">
+            <li>
+              <h5 class="categoryHead">{{category.categoryHeading}}</h5>
+            </li>
+            <li class="categoryItem">{{category.item1}}</li>
+            <li class="categoryItem">{{category.item2}}</li>
+            <li class="categoryItem">{{category.item3}}</li>
+            <li class="categoryViewAll mt-2 text-"> <a>View All</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="btn viewAllCategory" routerLink="Category" (click)="goCategories()">View all
+      Categories</button>
+  </div>
+</div>
+
+<!-- To display the Section to input Location -->
+
+<div class="shadow p-2 mb-1 mt-2 bg-body rounded locationList" *ngIf="showLocationList">
+  <div class="locationInputSection">
+    <input type="text" placeholder="Enter Pincode" maxlength="6" class="inputField">
+  </div>
+</div>
